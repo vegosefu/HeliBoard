@@ -16,11 +16,14 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: |
-          ./gradlew assembleDebug 2>&1 | tee /tmp/build.log || (
-            echo "======= ERORI KOTLIN ======="
-            grep "^e: " /tmp/build.log
-            exit 1
-          )
+          set +e
+          ./gradlew assembleDebug > /tmp/build.log 2>&1
+          EXIT_CODE=$?
+          echo "======= ERORI ======="
+          grep -E "error:|Error:|FAILED|Exception|^e:" /tmp/build.log | head -50
+          echo "======= ULTIMELE 30 LINII ======="
+          tail -30 /tmp/build.log
+          exit $EXIT_CODE
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
