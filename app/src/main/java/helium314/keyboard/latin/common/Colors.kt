@@ -606,7 +606,7 @@ private fun colorFilter(color: Int, mode: BlendModeCompat = BlendModeCompat.MODU
 }
 
 private fun pressedStateList(pressed: Int, normal: Int): ColorStateList {
-        if (Settings.getValues().mNoVisualKeyFeedback) return ColorStateList.valueOf(normal)
+        if (Settings.getValues()?.mNoVisualKeyFeedback == true) return ColorStateList.valueOf(normal)
     val states = arrayOf(intArrayOf(android.R.attr.state_pressed), intArrayOf(-android.R.attr.state_pressed))
     return ColorStateList(states, intArrayOf(pressed, normal))
 }
