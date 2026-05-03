@@ -61,6 +61,7 @@ public class SettingsValues {
     public final boolean mInlineEmojiSearch;
     public final boolean mShowEmojiDescriptions;
     public final boolean mKeyPreviewPopupOn;
+    public final boolean mNoVisualKeyFeedback;
     public final boolean mShowsVoiceInputKey;
     public final boolean mLanguageSwitchKeyToOtherImes;
     public final boolean mLanguageSwitchKeyToOtherSubtypes;
@@ -187,6 +188,7 @@ public class SettingsValues {
         mInlineEmojiSearch = prefs.getBoolean(Settings.PREF_INLINE_EMOJI_SEARCH, Defaults.PREF_INLINE_EMOJI_SEARCH);
         mShowEmojiDescriptions = prefs.getBoolean(Settings.PREF_SHOW_EMOJI_DESCRIPTIONS, Defaults.PREF_SHOW_EMOJI_DESCRIPTIONS);
         mKeyPreviewPopupOn = prefs.getBoolean(Settings.PREF_POPUP_ON, Defaults.PREF_POPUP_ON);
+        mNoVisualKeyFeedback = prefs.getBoolean(Settings.PREF_NO_VISUAL_KEY_FEEDBACK, Defaults.PREF_NO_VISUAL_KEY_FEEDBACK);
         mSlidingKeyInputPreviewEnabled = prefs.getBoolean(
                 DebugSettings.PREF_SLIDING_KEY_INPUT_PREVIEW, Defaults.PREF_SLIDING_KEY_INPUT_PREVIEW);
         mShowsVoiceInputKey = mInputAttributes.mShouldShowVoiceInputKey;
