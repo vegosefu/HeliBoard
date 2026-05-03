@@ -15,7 +15,6 @@
     <!-- Title for the spell checking service settings screen. The app name should not be translated. -->
     <string name="android_spell_checker_settings">HeliBoard Spell Checker Settings</string>
     <!-- Option to provide vibrate/haptic feedback on keypress -->
-    <string name="no_visual_key_feedback">No visual key feedback</string>
     <string name="vibrate_on_keypress">Vibrate on keypress</string>
     <!-- Option to provide vibrate/haptic feedback on keypress even in do not disturb mode -->
     <string name="vibrate_in_dnd_mode">Vibrate in do not disturb mode</string>
@@ -1098,4 +1097,5 @@ New dictionary:
     <string name="gesture_data_links">Information on gesture data gathering on:</string>
 
     <!-- new strings should go above the section for gesture data gathering -->
+    <string name="no_visual_key_feedback">No visual key feedback</string>
 </resources>
