@@ -63,7 +63,6 @@ public class SettingsValues {
     public final boolean mKeyPreviewPopupOn;
     public final boolean mNoVisualKeyFeedback;
     public final boolean mHidePunctuationKeys;
-    public final boolean mHidePunctuationKeys;
     public final boolean mShowsVoiceInputKey;
     public final boolean mLanguageSwitchKeyToOtherImes;
     public final boolean mLanguageSwitchKeyToOtherSubtypes;
@@ -192,8 +191,6 @@ public class SettingsValues {
         mKeyPreviewPopupOn = prefs.getBoolean(Settings.PREF_POPUP_ON, Defaults.PREF_POPUP_ON);
         mNoVisualKeyFeedback = prefs.getBoolean(Settings.PREF_NO_VISUAL_KEY_FEEDBACK, Defaults.PREF_NO_VISUAL_KEY_FEEDBACK);
         mHidePunctuationKeys = prefs.getBoolean(Settings.PREF_HIDE_PUNCTUATION_KEYS, Defaults.PREF_HIDE_PUNCTUATION_KEYS);
-        mHidePunctuationKeys = prefs.getBoolean(Settings.PREF_HIDE_PUNCTUATION_KEYS, Defaults.PREF_HIDE_PUNCTUATION_KEYS);
-        public final boolean mHidePunctuationKeys = prefs.getBoolean(Settings.PREF_HIDE_PUNCTUATION_KEYS, Defaults.PREF_HIDE_PUNCTUATION_KEYS);
         mSlidingKeyInputPreviewEnabled = prefs.getBoolean(
                 DebugSettings.PREF_SLIDING_KEY_INPUT_PREVIEW, Defaults.PREF_SLIDING_KEY_INPUT_PREVIEW);
         mShowsVoiceInputKey = mInputAttributes.mShouldShowVoiceInputKey;
