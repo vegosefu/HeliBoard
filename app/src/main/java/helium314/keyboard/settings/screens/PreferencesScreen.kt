@@ -109,12 +109,8 @@ fun createPreferencesSettings(context: Context) = listOf(
     Setting(context, Settings.PREF_SHOW_POPUP_HINTS, R.string.show_popup_hints, R.string.show_popup_hints_summary) {
         SwitchPreference(it, Defaults.PREF_SHOW_POPUP_HINTS) { KeyboardSwitcher.getInstance().setThemeNeedsReload() }
     },
-    Setting(context, Settings.PREF_POPUP_ON,
     Setting(context, Settings.PREF_POPUP_ON, R.string.popup_on_keypress) {
         SwitchPreference(it, Defaults.PREF_POPUP_ON) { KeyboardSwitcher.getInstance().reloadKeyboard() }
-    },
-    Setting(context, Settings.PREF_NO_VISUAL_KEY_FEEDBACK, R.string.no_visual_key_feedback) {
-        SwitchPreference(it, Defaults.PREF_NO_VISUAL_KEY_FEEDBACK) { KeyboardSwitcher.getInstance().reloadKeyboard() }
     },
     Setting(context, Settings.PREF_NO_VISUAL_KEY_FEEDBACK, R.string.no_visual_key_feedback) {
         SwitchPreference(it, Defaults.PREF_NO_VISUAL_KEY_FEEDBACK) { KeyboardSwitcher.getInstance().reloadKeyboard() }
