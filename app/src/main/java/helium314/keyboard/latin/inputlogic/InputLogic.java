@@ -451,11 +451,12 @@ public final class InputLogic {
         mWordBeingCorrectedByCursor = null;
         mJustRevertedACommit = false;
         final Event processedEvent = mWordComposer.processEvent(event);
-        if (settingsValues.mHidePunctuationKeys && (processedEvent.getCodePoint() == (int)'.' || processedEvent.getCodePoint() == (int)',')) return;
-        if (settingsValues.mHidePunctuationKeys && (processedEvent.getCodePoint() == (int)'.' || processedEvent.getCodePoint() == (int)',')) return;
         final InputTransaction inputTransaction = new InputTransaction(settingsValues,
                 processedEvent, SystemClock.uptimeMillis(), mSpaceState,
                 getActualCapsMode(settingsValues, keyboardShiftMode));
+        if (settingsValues.mHidePunctuationKeys && (processedEvent.getCodePoint() == (int)'.' || processedEvent.getCodePoint() == (int)',')) {
+            return inputTransaction;
+        }
         if (processedEvent.getKeyCode() != KeyCode.DELETE
                 || inputTransaction.getTimestamp() > mLastKeyTime + Constants.LONG_PRESS_MILLISECONDS) {
             mDeleteCount = 0;
