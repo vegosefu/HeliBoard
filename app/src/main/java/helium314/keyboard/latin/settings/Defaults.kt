@@ -64,8 +64,6 @@ object Defaults {
     var PREF_NO_VISUAL_KEY_FEEDBACK = false
     @JvmField
     var PREF_HIDE_PUNCTUATION_KEYS = false
-    @JvmField
-    var PREF_HIDE_PUNCTUATION_KEYS = false
     const val PREF_AUTO_CORRECTION = true
     const val PREF_MORE_AUTO_CORRECTION = false
     const val PREF_AUTO_CORRECT_THRESHOLD = 0.185f
