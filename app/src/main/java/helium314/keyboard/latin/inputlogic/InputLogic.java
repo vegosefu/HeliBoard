@@ -452,7 +452,7 @@ public final class InputLogic {
         mJustRevertedACommit = false;
         final Event processedEvent = mWordComposer.processEvent(event);
         if (settingsValues.mHidePunctuationKeys && (processedEvent.getCodePoint() == (int)'.' || processedEvent.getCodePoint() == (int)',')) return;
-        if (settingsValues.mHidePunctuationKeys && (processedEvent.getMCodePoint() == (int)'.' || processedEvent.getMCodePoint() == (int)',')) return;
+        if (settingsValues.mHidePunctuationKeys && (processedEvent.getCodePoint() == (int)'.' || processedEvent.getCodePoint() == (int)',')) return;
         final InputTransaction inputTransaction = new InputTransaction(settingsValues,
                 processedEvent, SystemClock.uptimeMillis(), mSpaceState,
                 getActualCapsMode(settingsValues, keyboardShiftMode));
