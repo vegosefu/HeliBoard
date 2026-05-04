@@ -117,6 +117,9 @@ fun createPreferencesSettings(context: Context) = listOf(
     Setting(context, Settings.PREF_NO_VISUAL_KEY_FEEDBACK, R.string.no_visual_key_feedback) {
         SwitchPreference(it, Defaults.PREF_NO_VISUAL_KEY_FEEDBACK) { KeyboardSwitcher.getInstance().reloadKeyboard() }
     },
+    Setting(context, Settings.PREF_NO_VISUAL_KEY_FEEDBACK, R.string.no_visual_key_feedback) {
+        SwitchPreference(it, Defaults.PREF_NO_VISUAL_KEY_FEEDBACK) { KeyboardSwitcher.getInstance().reloadKeyboard() }
+    },
     Setting(context, Settings.PREF_VIBRATE_ON, R.string.vibrate_on_keypress) {
         SwitchPreference(it, Defaults.PREF_VIBRATE_ON)
     },
