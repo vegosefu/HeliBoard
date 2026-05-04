@@ -454,7 +454,7 @@ public final class InputLogic {
         final InputTransaction inputTransaction = new InputTransaction(settingsValues,
                 processedEvent, SystemClock.uptimeMillis(), mSpaceState,
                 getActualCapsMode(settingsValues, keyboardShiftMode));
-        if (settingsValues.mHidePunctuationKeys && (processedEvent.getCodePoint() == (int)'.' || processedEvent.getCodePoint() == (int)',')) {
+        if ((settingsValues.mHidePeriodKey && processedEvent.getCodePoint() == (int)'.') || (settingsValues.mHideCommaKey && processedEvent.getCodePoint() == (int)',')) {
             return inputTransaction;
         }
         if (processedEvent.getKeyCode() != KeyCode.DELETE

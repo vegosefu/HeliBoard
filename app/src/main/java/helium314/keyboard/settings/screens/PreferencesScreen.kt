@@ -52,7 +52,8 @@ fun PreferencesScreen(
         Settings.PREF_SHOW_TLD_POPUP_KEYS,
         Settings.PREF_POPUP_ON,
         Settings.PREF_NO_VISUAL_KEY_FEEDBACK,
-        Settings.PREF_HIDE_PUNCTUATION_KEYS,
+        Settings.PREF_HIDE_PERIOD_KEY,
+        Settings.PREF_HIDE_COMMA_KEY,
         if (AudioAndHapticFeedbackManager.getInstance().hasVibrator())
             Settings.PREF_VIBRATE_ON else null,
         if (prefs.getBoolean(Settings.PREF_VIBRATE_ON, Defaults.PREF_VIBRATE_ON))
@@ -114,8 +115,11 @@ fun createPreferencesSettings(context: Context) = listOf(
     Setting(context, Settings.PREF_POPUP_ON, R.string.popup_on_keypress) {
         SwitchPreference(it, Defaults.PREF_POPUP_ON) { KeyboardSwitcher.getInstance().reloadKeyboard() }
     },
-    Setting(context, Settings.PREF_HIDE_PUNCTUATION_KEYS, R.string.hide_punctuation_keys) {
-        SwitchPreference(it, Defaults.PREF_HIDE_PUNCTUATION_KEYS)
+    Setting(context, Settings.PREF_HIDE_PERIOD_KEY, R.string.hide_period_key) {
+        SwitchPreference(it, Defaults.PREF_HIDE_PERIOD_KEY)
+    },
+    Setting(context, Settings.PREF_HIDE_COMMA_KEY, R.string.hide_comma_key) {
+        SwitchPreference(it, Defaults.PREF_HIDE_COMMA_KEY)
     },
     Setting(context, Settings.PREF_NO_VISUAL_KEY_FEEDBACK, R.string.no_visual_key_feedback) {
         SwitchPreference(it, Defaults.PREF_NO_VISUAL_KEY_FEEDBACK) { KeyboardSwitcher.getInstance().reloadKeyboard() }
