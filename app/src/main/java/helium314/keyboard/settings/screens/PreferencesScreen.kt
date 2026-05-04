@@ -51,7 +51,6 @@ fun PreferencesScreen(
         Settings.PREF_SHOW_POPUP_HINTS,
         Settings.PREF_SHOW_TLD_POPUP_KEYS,
         Settings.PREF_POPUP_ON,
-        Settings.PREF_NO_VISUAL_KEY_FEEDBACK,
         if (AudioAndHapticFeedbackManager.getInstance().hasVibrator())
             Settings.PREF_VIBRATE_ON else null,
         if (prefs.getBoolean(Settings.PREF_VIBRATE_ON, Defaults.PREF_VIBRATE_ON))
